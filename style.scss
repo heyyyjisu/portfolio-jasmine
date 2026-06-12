@@ -1,0 +1,24 @@
+@use "./partials/normalize";
+@use "./partials/colors" as *;
+@use "./sections/hero";
+@use "./sections/work";
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $bg;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   background-image: radial-gradient(circle, #000000 1px, transparent 1px);
+  //   background-size: 2px 2px;
+  //   opacity: 0.2;
+  // }
+}

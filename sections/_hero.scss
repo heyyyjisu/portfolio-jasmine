@@ -1,0 +1,54 @@
+@use "../partials/mixins" as *;
+@use "../partials/fonts";
+@use "../partials/variables" as *;
+@use "../partials/colors" as *;
+
+.hero {
+  @include flex(column, center, center);
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  margin: 0 60px 0 60px;
+
+  &__name {
+    @include flex(column, center, center);
+    position: relative;
+    width: 120%;
+    z-index: 2;
+    margin-bottom: -40px;
+    margin-left: -80px;
+    transform: rotate(-20deg);
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__image {
+    @include flex(column, center, center);
+    position: relative;
+    width: 80%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+      background-size: 2px 2px;
+      opacity: 0.2;
+    }
+  }
+  &__summary {
+    font-family: $font-primary;
+    color: $primary-color;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
