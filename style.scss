@@ -2,6 +2,7 @@
 @use "./partials/colors" as *;
 @use "./sections/hero";
 @use "./sections/work";
+@use "./sections/skill";
 
 html {
   scroll-snap-type: y mandatory;

@@ -244,16 +244,33 @@ summary {
 
 .work {
   height: 100dvh;
+  overflow: hidden;
   scroll-snap-align: start;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.work__title {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: auto;
+  object-fit: contain;
+}
+.work--second, .work--third {
+  display: grid;
+  grid-template-rows: 1fr;
 }
 .work__cell {
-  height: 100%;
+  min-height: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  font-family: "Instrument Serif", serif;
+  font-family: "Elms Sans", Sans-serif;
+}
+.work__cell--photo {
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
 }
 .work__cell--photo img {
   width: 100%;
@@ -283,6 +300,85 @@ summary {
 }
 .work__cell--des.work__cell--blue {
   background: #6ecdd7;
+}
+
+.skill {
+  scroll-snap-align: start;
+  position: relative;
+  height: 100dvh;
+  display: flex;
+  align-items: stretch;
+}
+.skill__background {
+  position: absolute;
+  inset: 0;
+}
+.skill__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.skill__background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.8352941176) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.2;
+}
+.skill__box {
+  background-color: #083d77;
+  margin: 1.5rem;
+  z-index: 1;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+}
+.skill__box__grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+.skill__box__grid .skill__item {
+  padding: 1rem;
+  border: none;
+}
+.skill__box__grid .skill__item:nth-child(1) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill__box__grid .skill__item:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill__box__grid .skill__item:nth-child(3) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill__box__item {
+  padding: 1rem;
+  overflow-wrap: break-word;
+  font-size: 0.75rem;
+  min-width: 0;
+}
+.skill__box h3 {
+  color: #fffee0;
+  font-size: 0.9rem;
+}
+.skill__box ul {
+  padding-left: 0;
+  margin: 0;
+}
+.skill__box li {
+  color: #fffee0;
+  list-style: none;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 html {
