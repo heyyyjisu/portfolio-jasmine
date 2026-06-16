@@ -1,0 +1,62 @@
+@use "../partials/mixins" as *;
+@use "../partials/fonts";
+@use "../partials/variables" as *;
+@use "../partials/colors" as *;
+
+.about {
+  scroll-snap-align: start;
+  position: relative;
+  height: 100dvh;
+  background-color: $bg;
+
+  &__item {
+    position: relative;
+  }
+
+  &__graphic {
+    img {
+      width: 60%;
+      transform: rotate(-10deg);
+      object-fit: cover;
+      display: block;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+      background-size: 2px 2px;
+      opacity: 0.2;
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: -20px;
+    left: 130px;
+    width: 65%;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__row {
+    font-family: $font-secondary;
+    color: $primary-color;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 1rem;
+
+    dt {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      opacity: 0.6;
+    }
+    dd {
+      font-size: 0.9rem;
+      text-align: right;
+      margin: 0;
+    }
+  }
+}

@@ -3,6 +3,9 @@
 @use "./sections/hero";
 @use "./sections/work";
 @use "./sections/skill";
+@use "./sections/about";
+@use "./sections/experience";
+@use "./sections/contact";
 
 html {
   scroll-snap-type: y mandatory;

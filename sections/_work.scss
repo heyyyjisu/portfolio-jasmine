@@ -18,6 +18,13 @@
     object-fit: contain;
   }
 
+  &--first {
+    .work__cell {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &--second,
   &--third {
     display: grid;
