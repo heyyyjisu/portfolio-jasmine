@@ -60,3 +60,40 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    &__list {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: none;
+      overflow-y: auto;
+      padding: 2rem;
+    }
+
+    &__item {
+      grid-column: 2;
+      grid-row: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__graphic img {
+      width: 80%;
+    }
+
+    &__title {
+      left: 30%;
+      bottom: 30%;
+    }
+  }
+}

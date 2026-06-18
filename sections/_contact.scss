@@ -13,7 +13,7 @@
 
   &__title {
     position: relative;
-    top: 8rem;
+    top: 6rem;
     width: 60%;
     display: flex;
 
@@ -51,6 +51,29 @@
     a {
       text-decoration: none;
       color: inherit;
+    }
+  }
+
+  @media (min-width: 768px) {
+    gap: 4rem;
+
+    &__title {
+      position: relative;
+      top: 0;
+      width: 20%;
+    }
+
+    &__wrapper {
+      flex: 0 0 auto;
+      flex-direction: row;
+      gap: 4rem;
+      justify-content: center;
+    }
+
+    &__list {
+      img {
+        width: 2rem;
+      }
     }
   }
 }
